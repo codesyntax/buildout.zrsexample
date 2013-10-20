@@ -3,6 +3,8 @@ buildout.zrsexample
 
 Example buildout with ZRS, HAProxy and Varnish
 
+Background
+-------------
 
 Recently [ZC](http://www.zope.com) released
 [ZRS](https://pypi.python.org/pypi/zc.zrs), their ZEO replication service,
@@ -14,6 +16,10 @@ was prepared with a great feature: support for zc.zrs. As noted by
 this was a very big feature for a small release, because not only provides
 a way to backup your ZEO server live, but also provides a way to create
 extra ZEO servers and they can also be configured to serve content.
+
+
+Example configuration with buildout
+-------------------------------------
 
 This buildout shows an example to create such a configuration. It also provides
 configuration for HAProxy and Varnish if you want to serve everything
@@ -58,3 +64,16 @@ You will need to configure your webserver to serve the first instance in another
 domain (for instance edit.yourserver.com) and server the main domain (www.yourserver.com)
 through Varnish. Varnish is not mandatory, you can just connect you webserver
 to HAProxy.
+
+If you are using Nginx, you can adapt [this configuration](http://www.starzel.de/blog/securing-plone-sites-with-https-and-nginx)
+prepared by [Philip Bauer](https://twitter.com/StarzelDe) which originaly was
+created to put all logged-in traffic under HTTPS- You can easily adapt it to put
+all your logged-in traffic to 8081 port and the not-logged one to 8000
+(or 8080 if you want to avoid Varnish)
+
+Further steps
+--------------
+
+You can easily add new instances connected to ZEO2 and ZEO3, just copy the
+buildout parts, and adjust the conf/haproxy.conf.in file to add more instances
+to the load-balancing process.
