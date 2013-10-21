@@ -1,10 +1,10 @@
 buildout.zrsexample
-===================
+====================
 
 Example buildout with ZRS, HAProxy and Varnish
 
 Background
--------------
+----------------
 
 Recently [ZC](http://www.zope.com) released
 [ZRS](https://pypi.python.org/pypi/zc.zrs), their ZEO replication service,
@@ -19,7 +19,7 @@ extra ZEO servers and they can also be configured to serve content.
 
 
 Example configuration with buildout
--------------------------------------
+-----------------------------------------
 
 This buildout shows an example to create such a configuration. It also provides
 configuration for HAProxy and Varnish if you want to serve everything
@@ -48,7 +48,8 @@ It will create a configuration like this one:
 
 
 
-What do you get with this?
+### What do you get with this?
+
 
 With this configuration you have a common Zope instance with a ZEO server to
 do your content-editing work. This happens in the 8081 port instance.
