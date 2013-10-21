@@ -12,7 +12,7 @@ under a [ZPL license](http://foundation.zope.org/agreements/ZPL_2.1.pdf).
 
 Soon after a new release of [plone.recipe.zeoserver](https://pypi.python.org/pypi/plone.recipe.zeoserver)
 was prepared with a great feature: support for zc.zrs. As noted by
-[Steve McMahong](http://www.stevemcmahon.com/steves-blog/plone-adds-replication-in-micro-release)
+[Steve McMahon](http://www.stevemcmahon.com/steves-blog/plone-adds-replication-in-micro-release)
 this was a very big feature for a small release, because not only provides
 a way to backup your ZEO server live, but also provides a way to create
 extra ZEO servers and they can also be configured to serve content.
